@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react" 
 import habitat from "../../api/habitat"
-import ListCommunitiesResponse from "../../types/community";
+import { ListCommunitiesResponse } from "../../types/community";
 import { AxiosResponse } from "axios";
+import { Link } from "react-router-dom";
 
 const CommunityList = () => {
     const [communities, setCommuntities] = useState<string[]>([]);
@@ -22,7 +23,7 @@ const CommunityList = () => {
     }, []);
 
     return <div>
-      {loading ? <p>Loading...</p> : communities.map((community: string) => <p>{community}</p>)}
+      {loading ? <p>Loading...</p> : communities.map((community: string) => <Link to={community}>{community}</Link>)}
     </div>
 }
 
