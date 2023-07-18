@@ -1,5 +1,4 @@
 import './App.css'
-import AppList from './views/apps/list.tsx';
 import Community from './views/communities/community.tsx'
 import CommunityList from './views/communities/list.tsx';
 
@@ -7,16 +6,27 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Home from './views/home/home.tsx';
 import Dex from './views/dex/dex.tsx';
+import Settings from './views/settings/settings.tsx';
+import AppList from './views/apps/list.tsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <Home/>,
   },
   {
     path: "communities/",
     element: <CommunityList/>,
+  }, 
+  {
+    path: "my-data",
+    element: <Dex/>,
+  }, 
+  {
+    path: "settings",
+    element: <Settings/>,
   }, 
   {
     path: "communities/:communityId",
