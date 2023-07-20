@@ -1,47 +1,35 @@
-import React from 'react';
-import SettingsPanel from '@components/settings/settingsPanel.tsx';
+import SettingsPanel from '@components/settings/settingsPanel';
+import SideTabPage from '@components/page/sidetabs';
+import Page from '@components/page/page';
+import SideTab from '@components/page/sidetab';
 import './settings.css';
 
 const Settings = () => {
-    const [tab, setTab] = React.useState('general');
 
+    const tabs: Map<string, string> = new Map([
+        ['general', 'General'],
+        ['pm', 'Process Manager'],
+        ['network', 'Network'],
+    ]);
 
-    const openGeneral = () => {
-        setTab('general');
-    };
-
-    const openPM = () => {
-        setTab('pm');
-    };
-
-    const openNetwork = () => {
-        setTab('network');
-    };
-
-    return (<div className='settings-container'>
-        <div className='settings-sidebar'>
-            <div onClick={openGeneral} className='settings-tab'>General</div>
-            <div onClick={openPM} className='settings-tab'>Process Manager</div>
-            <div onClick={openNetwork} className='settings-tab'>Network</div>
-        </div>
-        <div className='settings-pane'>
-            {tab === 'general' && 
-                <SettingsPanel panelName='General'>
-                    <div></div>
-                </SettingsPanel>
-            }
-            {tab === 'pm' && 
-                <SettingsPanel panelName='Process Manager'>
-                    <div>Content</div>
-                </SettingsPanel>
-            }
-            {tab === 'network' &&
-                <SettingsPanel panelName='Network'>
-                    <div>Network</div>
-                </SettingsPanel>
-            }
-        </div>
-    </div>);
+    return (
+        <Page title='settings'>
+            <SideTabPage 
+                tabsMap={tabs} 
+                defaultTab='general'
+            >
+                <SideTab id='general'>
+                    <SettingsPanel panelName='General'/>
+                </SideTab>
+                <SideTab id='pm'>
+                    <SettingsPanel panelName='Process Manager'/>
+                </SideTab>
+                <SideTab id='network'>
+                    <SettingsPanel panelName='Network'/>
+                </SideTab>
+            </SideTabPage>
+        </Page>
+    );
 }
 
 export default Settings;

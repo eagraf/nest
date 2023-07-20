@@ -10,6 +10,7 @@ import Home from './views/home/home.tsx';
 import Dex from './views/dex/dex.tsx';
 import Settings from './views/settings/settings.tsx';
 import AppList from './views/apps/list.tsx';
+import Navbar from '@components/page/navbar.tsx';
 
 const router = createBrowserRouter([
   {

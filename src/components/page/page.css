@@ -1,0 +1,22 @@
+.page {
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: lavender;
+    flex: 1;
+    padding-top: 5em;
+}
+
+.settings-tab {
+    padding: 0.3em 1em 0.3em 1em;
+    text-align: left;
+}
+
+.content {
+    height: 100%;
+}
