@@ -3,6 +3,7 @@ import { CommunityStateResponse } from "../../types/community";
 import habitat from "../../api/habitat"
 import { AxiosResponse } from "axios";
 import { useParams } from "react-router-dom";
+import Page from "@components/page/page";
 
 const Community = () => {
     const { communityId } = useParams();
@@ -26,9 +27,9 @@ const Community = () => {
         req();
     }, [communityId])
 
-    return <div>
+    return (<Page title='Community'>
         {loading ? <p>Loading...</p> : atob(communityState.community_state) }
-    </div>
+    </Page>);
 }
 
 export default Community;

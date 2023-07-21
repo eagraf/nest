@@ -3,6 +3,7 @@ import habitat from "../../api/habitat"
 import { ListCommunitiesResponse } from "../../types/community";
 import { AxiosResponse } from "axios";
 import { Link } from "react-router-dom";
+import Page from "@components/page/page";
 
 const CommunityList = () => {
     const [communities, setCommuntities] = useState<string[]>([]);
@@ -22,9 +23,11 @@ const CommunityList = () => {
         req();
     }, []);
 
-    return <div>
-      {loading ? <p>Loading...</p> : communities.map((community: string) => <Link to={community}>{community}</Link>)}
-    </div>
+    return (
+      <Page title='Communities'>
+        {loading ? <p>Loading...</p> : communities.map((community: string) => <Link to={community}>{community}</Link>)}
+      </Page>
+    );
 }
 
 export default CommunityList;

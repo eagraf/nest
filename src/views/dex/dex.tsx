@@ -1,5 +1,11 @@
-export default function Dex() {
+import Page from "@components/page/page"
+
+const Dex = () => {
     return (
-        <p>Dex</p>
-    )
+        <Page title='Dex'>
+            <p>Dex</p>
+        </Page>
+    );
 }
+
+export default Dex;
