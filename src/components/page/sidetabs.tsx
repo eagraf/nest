@@ -26,8 +26,8 @@ const SideTabPage = (props: PropsWithChildren<SidetabPageProps>) => {
                     );
                 })}
             </div>
-            <div className='sidetab-content'>
-                <div>
+            <div className='sidetab-content-container'>
+                <div className='sidetab-content'>
                 {
                     props.children && currentTab &&
                     Children.map(props.children, (child) => {
