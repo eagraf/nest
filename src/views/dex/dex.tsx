@@ -1,11 +1,11 @@
-import Page from "@components/page/page"
+import Page from '@components/page/page';
 
 const Dex = () => {
-    return (
-        <Page title='Dex'>
-            <p>Dex</p>
-        </Page>
-    );
-}
+  return (
+    <Page title="Dex">
+      <p>Dex</p>
+    </Page>
+  );
+};
 
 export default Dex;

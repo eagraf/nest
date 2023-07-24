@@ -1,19 +1,19 @@
 .navbar {
-    background-color: #40AA80;
-    padding-top: 1em;
-    font-weight: 700;
-    font-size: 1.25em;
-    color: white;
-    text-align: center;
+  background-color: #40aa80;
+  padding-top: 1em;
+  font-weight: 700;
+  font-size: 1.25em;
+  color: white;
+  text-align: center;
 
-    line-height: 1.25em;
-    height: 2.5em 
+  line-height: 1.25em;
+  height: 2.5em;
 }
 
 .title {
-    color: white;
+  color: white;
 }
 
 .title:hover {
-    color: white;
+  color: white;
 }

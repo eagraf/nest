@@ -22,10 +22,10 @@
 
     "paths": {
       "@hooks/*": ["./src/hooks/*"],
-      "@components/*": ["./src/components/*"],
-    },
+      "@components/*": ["./src/components/*"]
+    }
   },
   "include": ["src"],
-  
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
